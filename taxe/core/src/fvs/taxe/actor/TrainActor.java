@@ -9,9 +9,9 @@ import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import fvs.taxe.controller.Context;
 import gameLogic.Game;
 import gameLogic.GameState;
-import gameLogic.player.Player;
 import gameLogic.map.IPositionable;
 import gameLogic.map.Station;
+import gameLogic.player.Player;
 import gameLogic.resource.Train;
 
 public class TrainActor extends Image {
@@ -50,7 +50,7 @@ public class TrainActor extends Image {
 
     @Override
     public void act(float delta) {
-        if ((Game.getInstance().getState() == GameState.ANIMATING) && (!this.paused)){
+        if ((Game.getInstance().getState() == GameState.ANIMATING) && (!this.paused)) {
             //This function moves the train actors along their routes.
             //It renders everything every 1/delta seconds
             super.act(delta);

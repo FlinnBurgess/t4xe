@@ -2,7 +2,6 @@ package gameLogic.resource;
 
 import Util.Tuple;
 import fvs.taxe.actor.TrainActor;
-import gameLogic.Game;
 import gameLogic.map.IPositionable;
 import gameLogic.map.Station;
 
@@ -75,7 +74,8 @@ public class Train extends Resource {
 
     public void setRoute(List<Station> route) {
         // Final destination should be set to null after firing the arrival event
-        if (route != null && route.size() > 0) finalDestination = route.get(route.size() - 1);
+        if (route != null && route.size() > 0)
+            finalDestination = route.get(route.size() - 1);
 
         this.route = route;
     }
